@@ -100,6 +100,12 @@
 
 # Some Images:
 
+- <strong>Packs</strong>
+
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086374402477801533/hw_packsurprise.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086374402704297984/hw_boxsurprise.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086374402188382308/hw_boxsurprise_2f2f.png)
+
 - <strong>2 Fast 2 Furious Collection 01</strong>
 
 ![car](https://media.discordapp.net/attachments/1086372623002390620/1086372686449627157/1.5_mazdarx7_col02_hw.png)
