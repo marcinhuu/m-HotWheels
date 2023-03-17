@@ -95,7 +95,7 @@
 
 # Setup Images:
 
-- Copy all images inside of : m-Scratches/images
+- Copy all images inside of : m-HotWheels/images
 - Open your inventory and inside of folder html/images drop it
 
 # Some Images:
