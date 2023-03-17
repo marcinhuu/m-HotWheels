@@ -10,13 +10,13 @@
 
 # Cars Available:
 - 2 Fast 2 Furious Collection
-    << Collection 01: >>
+    - Collection 01:
         - [1/5] Skyline
         - [2/5] Silvia
         - [3/5] Ford
         - [4/5] Lamborghini
         - [5/5] Mazda RX-7
-    << Collection 02: >>
+    - Collection 02:
         - [1/5] Mazda RX-7
         - [2/5] Chev Camaro
         - [3/5] Jeep
