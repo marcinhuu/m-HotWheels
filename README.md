@@ -9,7 +9,7 @@
 * Script still in initialization. We are developing hotwheels car collection / trading script.
 
 # Cars Available:
-> 2 Fast 2 Furious Collection
+- 2 Fast 2 Furious Collection
     << Collection 01: >>
         - [1/5] Skyline
         - [2/5] Silvia
@@ -23,21 +23,21 @@
         - [4/5] Porsche GT4
         - [5/5] Skyline
 
-> Honda Collection
+- Honda Collection
     - [1/5] Honda Civic EF
     - [2/5] Honda Civic EG
     - [3/5] Honda Civic SI
     - [4/5] Honda Civic TypeR
     - [5/5] Honda Civic TypeR
 
-> Morpar Collection
+- Morpar Collection
     - [1/5] Dodge Dart
     - [2/5] Dodge Challenger
     - [3/5] Dodge Challenger Drift
     - [4/5] Dodge Challenger SRT
     - [4/5] Dodge Viper SRT
 
-> General Car's
+- General Car's
     - Cadillac CT5
     - Jaguar X
     - Lamborghini Estoque
