@@ -17,7 +17,7 @@
         - [4/5] Lamborghini
         - [5/5] Mazda RX-7
     - Collection 02:
-        - [1/5] Mazda RX-7
+        - [1/5] Mazda RX-7 ![mazdarx7](https://media.discordapp.net/attachments/1019726083827961956/1086372420379746345/1.5_mazdarx7_col02_hw.png)
         - [2/5] Chev Camaro
         - [3/5] Jeep
         - [4/5] Porsche GT4
