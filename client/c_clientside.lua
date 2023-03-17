@@ -32,3 +32,27 @@ CreateThread(function()
         FreezeEntityPosition(peds, true)
     end
 end)
+
+RegisterNetEvent("m-HotWheels:Client:OpenPackSurprise")
+AddEventHandler("m-HotWheels:Client:OpenPackSurprise", function()
+	QBCore.Functions.Progressbar("OpeningPack", "Opening a pack...", 5000, false, true, {
+		disableMovement = true,
+		disableCarMovement = false,
+		disableMouse = false,
+		disableCombat = true,
+	}, {}, {}, {}, function()
+		TriggerServerEvent("m-HotWheels:Server:OpenPackSurprise")
+	end)
+end)
+
+RegisterNetEvent("m-HotWheels:Client:OpenBoxSurprise")
+AddEventHandler("m-HotWheels:Client:OpenBoxSurprise", function()
+	QBCore.Functions.Progressbar("OpeninBox", "Opening a box...", 5000, false, true, {
+		disableMovement = true,
+		disableCarMovement = false,
+		disableMouse = false,
+		disableCombat = true,
+	}, {}, {}, {}, function()
+		TriggerServerEvent("m-HotWheels:Server:OpenBoxSurprise")
+	end)
+end)
