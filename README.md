@@ -44,6 +44,55 @@
     - Porsche Panamera
     - Tesla Model 3
 
+# Some Images:
+
+- <strong>Packs</strong>
+
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086374402477801533/hw_packsurprise.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086374402704297984/hw_boxsurprise.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086374402188382308/hw_boxsurprise_2f2f.png)
+
+- <strong>2 Fast 2 Furious Collection 01</strong>
+
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086372686449627157/1.5_mazdarx7_col02_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086372686688682105/2.5_chevcamaro_col02_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086372686999068682/3.5_jeep_col02_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086372687351402546/4.5_porschegt4_col02_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086372687594651658/5.5_skyline_col02_hw.png)
+
+- <strong>2 Fast 2 Furious Collection 02</strong>
+
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373120589447228/1.5_skyline_col01_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373120954343474/2.5_silvia_col01_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373121642205364/4.5_lamborghini_col01_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373121642205364/4.5_lamborghini_col01_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373122032279704/5.5_mazdarx7_col01_hw.png)
+
+- <strong>Honda Collection</strong>
+
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373657561018519/1.5_hw_hondacivic_ef.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373658018185306/2.5_hw_hondaciviceg.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373658404073503/3.5_hw_hondacivicsi.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373658731216916/4.5_hw_hondacivictyper.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373659029029035/5.5_hw_hondacivictyper.png)
+
+- <strong>Morpar Collection</strong>
+
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373807691939940/1.5_hw_dodgedart.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373807977144393/2.5_hw_dodgechallenger.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373808195244193/3.5_hw_dodgechallengerdrift.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373808455303228/4.5_hw_dodgechallengersrt.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373808711147583/5.5_hw_dodgevipersrt.png)
+
+- <strong>General Car's</strong>
+
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373947081244724/caddilacct5_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373947345481868/jaguarxeproject8_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373947622314065/lamborghiniestoque_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373947882356806/porschepanameraturbo_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373948146593913/teslamodel3_hw.png)
+
+
 # Install the script:
 
 **qb-core/shared/items.lua**
@@ -98,50 +147,3 @@
 - Copy all images inside of : m-HotWheels/images
 - Open your inventory and inside of folder html/images drop it
 
-# Some Images:
-
-- <strong>Packs</strong>
-
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086374402477801533/hw_packsurprise.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086374402704297984/hw_boxsurprise.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086374402188382308/hw_boxsurprise_2f2f.png)
-
-- <strong>2 Fast 2 Furious Collection 01</strong>
-
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086372686449627157/1.5_mazdarx7_col02_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086372686688682105/2.5_chevcamaro_col02_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086372686999068682/3.5_jeep_col02_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086372687351402546/4.5_porschegt4_col02_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086372687594651658/5.5_skyline_col02_hw.png)
-
-- <strong>2 Fast 2 Furious Collection 02</strong>
-
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373120589447228/1.5_skyline_col01_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373120954343474/2.5_silvia_col01_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373121642205364/4.5_lamborghini_col01_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373121642205364/4.5_lamborghini_col01_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373122032279704/5.5_mazdarx7_col01_hw.png)
-
-- <strong>Honda Collection</strong>
-
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373657561018519/1.5_hw_hondacivic_ef.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373658018185306/2.5_hw_hondaciviceg.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373658404073503/3.5_hw_hondacivicsi.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373658731216916/4.5_hw_hondacivictyper.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373659029029035/5.5_hw_hondacivictyper.png)
-
-- <strong>Morpar Collection</strong>
-
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373807691939940/1.5_hw_dodgedart.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373807977144393/2.5_hw_dodgechallenger.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373808195244193/3.5_hw_dodgechallengerdrift.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373808455303228/4.5_hw_dodgechallengersrt.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373808711147583/5.5_hw_dodgevipersrt.png)
-
-- <strong>General Car's</strong>
-
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373947081244724/caddilacct5_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373947345481868/jaguarxeproject8_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373947622314065/lamborghiniestoque_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373947882356806/porschepanameraturbo_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373948146593913/teslamodel3_hw.png)
