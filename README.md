@@ -11,17 +11,17 @@
 # Cars Available:
 - <strong>2 Fast 2 Furious Collection</strong>
     - Collection 01:
-        - [1/5] Skyline
-        - [2/5] Silvia
-        - [3/5] Ford
-        - [4/5] Lamborghini
-        - [5/5] Mazda RX-7
-    - Collection 02:
         - [1/5] Mazda RX-7
         - [2/5] Chev Camaro
         - [3/5] Jeep
         - [4/5] Porsche GT4
         - [5/5] Skyline
+    - Collection 02:
+        - [1/5] Skyline
+        - [2/5] Silvia
+        - [3/5] Ford
+        - [4/5] Lamborghini
+        - [5/5] Mazda RX-7
 
 - <strong>Honda Collection</strong>
     - [1/5] Honda Civic EF
@@ -64,7 +64,7 @@
 
 ![car](https://media.discordapp.net/attachments/1086372623002390620/1086373120589447228/1.5_skyline_col01_hw.png)
 ![car](https://media.discordapp.net/attachments/1086372623002390620/1086373120954343474/2.5_silvia_col01_hw.png)
-![car](https://media.discordapp.net/attachments/1086372623002390620/1086373121642205364/4.5_lamborghini_col01_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086373121352810597/3.5_ford_col01_hw.png)
 ![car](https://media.discordapp.net/attachments/1086372623002390620/1086373121642205364/4.5_lamborghini_col01_hw.png)
 ![car](https://media.discordapp.net/attachments/1086372623002390620/1086373122032279704/5.5_mazdarx7_col01_hw.png)
 
