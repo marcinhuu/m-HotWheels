@@ -17,7 +17,7 @@
         - [4/5] Lamborghini
         - [5/5] Mazda RX-7
     - Collection 02:
-        - [1/5] Mazda RX-7 ![mazdarx7](https://media.discordapp.net/attachments/1019726083827961956/1086372420379746345/1.5_mazdarx7_col02_hw.png)
+        - [1/5] Mazda RX-7
         - [2/5] Chev Camaro
         - [3/5] Jeep
         - [4/5] Porsche GT4
@@ -97,3 +97,12 @@
 
 - Copy all images inside of : m-Scratches/images
 - Open your inventory and inside of folder html/images drop it
+
+# Some Images:
+
+<strong>2 Fast 2 Furious Collection</strong>
+![mazdarx7](https://media.discordapp.net/attachments/1086372623002390620/1086372686449627157/1.5_mazdarx7_col02_hw.png)
+![mazdarx7](https://media.discordapp.net/attachments/1086372623002390620/1086372686688682105/2.5_chevcamaro_col02_hw.png)
+![mazdarx7](https://media.discordapp.net/attachments/1086372623002390620/1086372686999068682/3.5_jeep_col02_hw.png)
+![mazdarx7](https://media.discordapp.net/attachments/1086372623002390620/1086372687351402546/4.5_porschegt4_col02_hw.png)
+![mazdarx7](https://media.discordapp.net/attachments/1086372623002390620/1086372687594651658/5.5_skyline_col02_hw.png)
