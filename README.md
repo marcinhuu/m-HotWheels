@@ -9,7 +9,7 @@
 * Script still in initialization. We are developing hotwheels car collection / trading script.
 
 # Cars Available:
-- 2 Fast 2 Furious Collection
+- <strong>2 Fast 2 Furious Collection</strong>
     - Collection 01:
         - [1/5] Skyline
         - [2/5] Silvia
