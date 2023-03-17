@@ -23,21 +23,21 @@
         - [4/5] Porsche GT4
         - [5/5] Skyline
 
-- Honda Collection
+- <strong>Honda Collection</strong>
     - [1/5] Honda Civic EF
     - [2/5] Honda Civic EG
     - [3/5] Honda Civic SI
     - [4/5] Honda Civic TypeR
     - [5/5] Honda Civic TypeR
 
-- Morpar Collection
+- <strong>Morpar Collection</strong>
     - [1/5] Dodge Dart
     - [2/5] Dodge Challenger
     - [3/5] Dodge Challenger Drift
     - [4/5] Dodge Challenger SRT
     - [4/5] Dodge Viper SRT
 
-- General Car's
+- <strong>General Car's</strong>
     - Cadillac CT5
     - Jaguar X
     - Lamborghini Estoque
