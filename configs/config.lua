@@ -7,7 +7,7 @@ Config.Settings = {
         [1] = { type = 4, hash = GetHashKey("a_m_m_og_boss_01"), loc = vector4(-1127.07, -1440.03, 4.23, 302.94)},
     },
     Blip = { 
-        blipEnable = true, -- Enable blip for illegal mission?
+        blipEnable = true, -- Enable blip?
         blipLocation = vector3(-1127.07, -1440.03, 5.23), -- Blip location
         blipSprite = 446, -- Blip sprite
         blipScale = 0.7, -- Blip scale
