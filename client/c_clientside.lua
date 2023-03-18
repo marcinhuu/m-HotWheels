@@ -40,7 +40,9 @@ AddEventHandler("m-HotWheels:Client:OpenPackSurprise", function()
 		disableCarMovement = false,
 		disableMouse = false,
 		disableCombat = true,
-	}, {}, {}, {}, function()
+	}, {
+		animDict = "mp_arresting",anim = "a_uncuff",flags = 49
+	}, {}, {}, function()
 		TriggerServerEvent("m-HotWheels:Server:OpenPackSurprise")
 	end)
 end)
@@ -52,7 +54,23 @@ AddEventHandler("m-HotWheels:Client:OpenBoxSurprise", function()
 		disableCarMovement = false,
 		disableMouse = false,
 		disableCombat = true,
-	}, {}, {}, {}, function()
+	}, {
+		animDict = "mp_arresting",anim = "a_uncuff",flags = 49
+	}, {}, {}, function()
 		TriggerServerEvent("m-HotWheels:Server:OpenBoxSurprise")
+	end)
+end)
+
+RegisterNetEvent("m-HotWheels:Client:Open2FastSurprise")
+AddEventHandler("m-HotWheels:Client:Open2FastSurprise", function()
+	QBCore.Functions.Progressbar("OpeninBox", "Opening fast furious box..", 5000, false, true, {
+		disableMovement = true,
+		disableCarMovement = false,
+		disableMouse = false,
+		disableCombat = true,
+	}, {
+		animDict = "mp_arresting",anim = "a_uncuff",flags = 49
+	}, {}, {}, function()
+		TriggerServerEvent("m-HotWheels:Server:Open2FastSurprise")
 	end)
 end)
