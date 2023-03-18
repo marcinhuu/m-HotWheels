@@ -1,4 +1,10 @@
-local QBCore = exports["qb-core"]:GetCoreObject()
+if Config.Framework == "qb" then
+    local QBCore = exports["qb-core"]:GetCoreObject()
+elseif Config.Framework == "esx" then
+    ESX = exports['es_extended']:getSharedObject()
+else
+    print("The "..Config.Framework.." is wrong or not available")
+end
 
 RegisterNetEvent('m-HotWheels:Client:Notify')
 AddEventHandler("m-HotWheels:Client:Notify", function(msg,type,time)
@@ -20,9 +26,13 @@ end
 -- ========================================================== Open Shop
 RegisterNetEvent('m-HotWheels:Client:OpenShop')
 AddEventHandler('m-HotWheels:Client:OpenShop', function()
-    TriggerServerEvent("inventory:server:OpenInventory", "shop", "HotWheels", {
-        label = "HotWheels",
-        items = Config.Shop,
-        slots = #Config.Shop,
-    })
+    if Config.Framework == "qb" then
+        TriggerServerEvent("inventory:server:OpenInventory", "shop", "HotWheels", {
+            label = "HotWheels",
+            items = Config.Shop,
+            slots = #Config.Shop,
+        })
+    elseif Config.Framework == "esx" then
+
+    end
 end)
