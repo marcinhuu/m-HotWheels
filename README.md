@@ -22,6 +22,12 @@
         - [3/5] Ford
         - [4/5] Lamborghini
         - [5/5] Mazda RX-7
+    - Collection 03:
+        - [1/5] Nissan 240sx
+        - [2/5] Mitsubishi Eclipse
+        - [3/5] Mazda RX-7
+        - [4/5] Skyline R33
+        - [5/5] Volkswagen Jetta
 
 - <strong>Honda Collection</strong>
     - [1/5] Honda Civic EF
@@ -68,6 +74,14 @@
 ![car](https://media.discordapp.net/attachments/1086372623002390620/1086373121642205364/4.5_lamborghini_col01_hw.png)
 ![car](https://media.discordapp.net/attachments/1086372623002390620/1086373122032279704/5.5_mazdarx7_col01_hw.png)
 
+- <strong>2 Fast 2 Furious Collection 03</strong>
+
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086642745705234543/1.5_nissan240_col03_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086642745965285506/2.5_mitsubishieclipse_col03_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086642746183405599/3.5_mazdarx7_col03_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086642746409881690/4.5_skyliner33_col03_hw.png)
+![car](https://media.discordapp.net/attachments/1086372623002390620/1086642746653167686/5.5_jetta_col03_hw.png)
+
 - <strong>Honda Collection</strong>
 
 ![car](https://media.discordapp.net/attachments/1086372623002390620/1086373657561018519/1.5_hw_hondacivic_ef.png)
@@ -107,11 +121,17 @@
     ["4.5_lamborghini_col01_hw"]    = {["name"] = "4.5_lamborghini_col01_hw",       ["label"] = "[4/5] Lamborghini",            ["weight"] = 50,    ["type"] = "item",  ["image"] = "4.5_lamborghini_col01_hw.png",     ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 77%"},
     ["5.5_mazdarx7_col01_hw"]       = {["name"] = "5.5_mazdarx7_col01_hw",          ["label"] = "[5/5] Mazda RX-7",             ["weight"] = 50,    ["type"] = "item",  ["image"] = "5.5_mazdarx7_col01_hw.png",        ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 68%"},
         -- Collection 02
-    ["1.5_mazdarx7_col02_hw"]       = {["name"] = "1.5_mazdarx7_col02_hw",          ["label"] = "[1/5] Mazda RX-8",             ["weight"] = 50,    ["type"] = "item",  ["image"] = "1.5_mazdarx7_col02_hw.png",        ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 68%"},
+    ["1.5_mazdarx7_col02_hw"]       = {["name"] = "1.5_mazdarx7_col02_hw",          ["label"] = "[1/5] Mazda RX-7",             ["weight"] = 50,    ["type"] = "item",  ["image"] = "1.5_mazdarx7_col02_hw.png",        ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 68%"},
     ["2.5_chevcamaro_col02_hw"]     = {["name"] = "2.5_chevcamaro_col02_hw",        ["label"] = "[2/5] Chev Camaro",            ["weight"] = 50,    ["type"] = "item",  ["image"] = "2.5_chevcamaro_col02_hw.png",      ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 58%"},
     ["3.5_jeep_col02_hw"]           = {["name"] = "3.5_jeep_col02_hw",              ["label"] = "[3/5] Jeep",                   ["weight"] = 50,    ["type"] = "item",  ["image"] = "3.5_jeep_col02_hw.png",            ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 42%"},
     ["4.5_porschegt4_col02_hw"]     = {["name"] = "4.5_porschegt4_col02_hw",        ["label"] = "[4/5] Porsche GT4",            ["weight"] = 50,    ["type"] = "item",  ["image"] = "4.5_porschegt4_col02_hw.png",      ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 72%"},
     ["5.5_skyline_col02_hw"]        = {["name"] = "5.5_skyline_col02_hw",           ["label"] = "[5/5] Skyline",                ["weight"] = 50,    ["type"] = "item",  ["image"] = "5.5_skyline_col02_hw.png",         ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 90%"},
+    -- Collection 03
+    ["1.5_nissan240_col03_hw"]      = {["name"] = "1.5_nissan240_col03_hw",         ["label"] = "[1/5] Nissan 240sx",           ["weight"] = 50,    ["type"] = "item",  ["image"] = "1.5_nissan240_col03_hw.png",       ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 68%"},
+    ["2.5_eclipse_col03_hw"]        = {["name"] = "2.5_eclipse_col03_hw",           ["label"] = "[2/5] Mitsubishi Eclipse",     ["weight"] = 50,    ["type"] = "item",  ["image"] = "2.5_eclipse_col03_hw.png",         ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 58%"},
+    ["3.5_mazdarx7_col03_hw"]       = {["name"] = "3.5_mazdarx7_col03_hw",          ["label"] = "[3/5] Mazda RX-7",             ["weight"] = 50,    ["type"] = "item",  ["image"] = "3.5_mazdarx7_col03_hw.png",        ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 42%"},
+    ["4.5_skyliner33_col03_hw"]     = {["name"] = "4.5_skyliner33_col03_hw",        ["label"] = "[4/5] Skyline R33",            ["weight"] = 50,    ["type"] = "item",  ["image"] = "4.5_skyliner33_col03_hw.png",      ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 72%"},
+    ["5.5_jetta_col03_hw"]          = {["name"] = "5.5_jetta_col03_hw",             ["label"] = "[5/5] Jetta",                  ["weight"] = 50,    ["type"] = "item",  ["image"] = "5.5_jetta_col03_hw.png",           ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: 2 Fast 2 Furious<p></p>Rarity: 90%"},
 
     -- [[ Honda Collection ]]
     ["1.5_hw_hondacivic_ef"]        = {["name"] = "1.5_hw_hondacivic_ef",           ["label"] = "[1/5] Honda Civic EF",         ["weight"] = 50,    ["type"] = "item",  ["image"] = "1.5_hw_hondacivic_ef.png",         ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Collection: Honda Cars<p></p>Rarity: 75%"},
