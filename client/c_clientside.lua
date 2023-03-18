@@ -1,4 +1,4 @@
-local QBCore = exports[Config.CoreName]:GetCoreObject()
+local QBCore = exports["qb-core"]:GetCoreObject()
 
 local peds = Config.Settings.Ped
 

@@ -1,4 +1,4 @@
-local QBCore = exports[Config.CoreName]:GetCoreObject()
+local QBCore = exports["qb-core"]:GetCoreObject()
 
 CreateThread(function()
     for k, v in pairs(Config.TargetLocations["Trader"]) do

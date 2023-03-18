@@ -1,4 +1,4 @@
-local QBCore = exports[Config.CoreName]:GetCoreObject()
+local QBCore = exports["qb-core"]:GetCoreObject()
 
 RegisterNetEvent('m-HotWheels:Client:Notify')
 AddEventHandler("m-HotWheels:Client:Notify", function(msg,type,time)

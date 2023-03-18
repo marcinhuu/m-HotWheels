@@ -1,6 +1,5 @@
 Config = {}
 
-Config.CoreName = "qb-core"
 Config.Cooldown = { Enable = false, Time = 60 } -- Enable cooldown? 60 = 1 Minute
 
 
