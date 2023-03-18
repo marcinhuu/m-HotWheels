@@ -1,4 +1,10 @@
-local QBCore = exports["qb-core"]:GetCoreObject()
+if Config.Framework == "qb" then
+	local QBCore = exports["qb-core"]:GetCoreObject()
+elseif Config.Framework == "esx" then
+	ESX = exports['es_extended']:getSharedObject()
+else
+	print("The "..Config.Framework.." is wrong or not available")
+end
 
 local peds = Config.Settings.Ped
 
@@ -35,42 +41,54 @@ end)
 
 RegisterNetEvent("m-HotWheels:Client:OpenPackSurprise")
 AddEventHandler("m-HotWheels:Client:OpenPackSurprise", function()
-	QBCore.Functions.Progressbar("OpeningPack", "Opening a pack...", 5000, false, true, {
-		disableMovement = true,
-		disableCarMovement = false,
-		disableMouse = false,
-		disableCombat = true,
-	}, {
-		animDict = "mp_arresting",anim = "a_uncuff",flags = 49
-	}, {}, {}, function()
-		TriggerServerEvent("m-HotWheels:Server:OpenPackSurprise")
-	end)
+	if Config.Framework == "qb" then
+		QBCore.Functions.Progressbar("OpeningPack", "Opening a pack...", 5000, false, true, {
+			disableMovement = true,
+			disableCarMovement = false,
+			disableMouse = false,
+			disableCombat = true,
+		}, {
+			animDict = "mp_arresting",anim = "a_uncuff",flags = 49
+		}, {}, {}, function()
+			TriggerServerEvent("m-HotWheels:Server:OpenPackSurprise")
+		end)
+	elseif Config.Framework == "esx" then
+
+	end
 end)
 
 RegisterNetEvent("m-HotWheels:Client:OpenBoxSurprise")
 AddEventHandler("m-HotWheels:Client:OpenBoxSurprise", function()
-	QBCore.Functions.Progressbar("OpeninBox", "Opening a box...", 5000, false, true, {
-		disableMovement = true,
-		disableCarMovement = false,
-		disableMouse = false,
-		disableCombat = true,
-	}, {
-		animDict = "mp_arresting",anim = "a_uncuff",flags = 49
-	}, {}, {}, function()
-		TriggerServerEvent("m-HotWheels:Server:OpenBoxSurprise")
-	end)
+	if Config.Framework == "qb" then
+		QBCore.Functions.Progressbar("OpeninBox", "Opening a box...", 5000, false, true, {
+			disableMovement = true,
+			disableCarMovement = false,
+			disableMouse = false,
+			disableCombat = true,
+		}, {
+			animDict = "mp_arresting",anim = "a_uncuff",flags = 49
+		}, {}, {}, function()
+			TriggerServerEvent("m-HotWheels:Server:OpenBoxSurprise")
+		end)
+	elseif Config.Framework == "esx" then
+
+	end
 end)
 
 RegisterNetEvent("m-HotWheels:Client:Open2FastSurprise")
 AddEventHandler("m-HotWheels:Client:Open2FastSurprise", function()
-	QBCore.Functions.Progressbar("OpeninBox", "Opening fast furious box..", 5000, false, true, {
-		disableMovement = true,
-		disableCarMovement = false,
-		disableMouse = false,
-		disableCombat = true,
-	}, {
-		animDict = "mp_arresting",anim = "a_uncuff",flags = 49
-	}, {}, {}, function()
-		TriggerServerEvent("m-HotWheels:Server:Open2FastSurprise")
-	end)
+	if Config.Framework == "qb" then
+		QBCore.Functions.Progressbar("OpeninBox", "Opening fast furious box..", 5000, false, true, {
+			disableMovement = true,
+			disableCarMovement = false,
+			disableMouse = false,
+			disableCombat = true,
+		}, {
+			animDict = "mp_arresting",anim = "a_uncuff",flags = 49
+		}, {}, {}, function()
+			TriggerServerEvent("m-HotWheels:Server:Open2FastSurprise")
+		end)
+	elseif Config.Framework == "esx" then
+
+	end
 end)
