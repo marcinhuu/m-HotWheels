@@ -79,7 +79,7 @@ Config.HotWheels = {
         "4.5_lamborghini_col01_hw",
         "5.5_mazdarx7_col01_hw",
         "1.5_nissan240_col03_hw",
-        "2.5_mitsubishieclipse_col03_hw",
+        "2.5_eclipse_col03_hw",
         "3.5_mazdarx7_col03_hw",
         "4.5_skyliner33_col03_hw",
         "5.5_jetta_col03_hw",
