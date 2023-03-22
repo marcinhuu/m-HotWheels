@@ -48,6 +48,28 @@ if Config.Framework == "qb" then
             TriggerClientEvent('m-HotWheels:Client:Open2FastSurprise', source)
         end
     end)
+
+    QBCore.Functions.CreateUseableItem("hw_box01", function(source, item) 
+        local src = source
+        local Player = QBCore.Functions.GetPlayer(src)
+        if not Player then return end
+        TriggerClientEvent("m-HotWheels:Client:OpenWhiteBox", src)
+    end)
+
+    QBCore.Functions.CreateUseableItem("hw_box02", function(source, item) 
+        local src = source
+        local Player = QBCore.Functions.GetPlayer(src)
+        if not Player then return end
+        TriggerClientEvent("m-HotWheels:Client:OpenGreyBox", src)
+    end)
+
+    QBCore.Functions.CreateUseableItem("hw_box03", function(source, item) 
+        local src = source
+        local Player = QBCore.Functions.GetPlayer(src)
+        if not Player then return end
+        TriggerClientEvent("m-HotWheels:Client:OpenBlueBox", src)
+    end)
+
 elseif Config.Framework == "esx" then
 
 end

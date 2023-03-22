@@ -29,6 +29,9 @@ Config.Shop = {
 	[1] = { name = "hw_packsurprise",        price = 500, amount = 10, info = {}, type = "item", slot = 1 },
     [2] = { name = "hw_boxsurprise",         price = 1000, amount = 10, info = {}, type = "item", slot = 2 },
     [3] = { name = "hw_boxsurprise_2f2f",    price = 1500, amount = 10, info = {}, type = "item", slot = 3 },
+    [4] = { name = "hw_box01",               price = 200, amount = 10, info = {}, type = "item", slot = 4 },
+    [5] = { name = "hw_box02",               price = 200, amount = 10, info = {}, type = "item", slot = 5 },
+    [6] = { name = "hw_box03",               price = 200, amount = 10, info = {}, type = "item", slot = 6 },
 }
 
 Config.HotWheels = {

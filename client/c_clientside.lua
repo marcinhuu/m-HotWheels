@@ -7,6 +7,7 @@ else
 end
 
 local peds = Config.Settings.Ped
+local citizenid = nil
 
 CreateThread(function()
 	if Config.Settings.Blip.blipEnable then
@@ -88,6 +89,40 @@ AddEventHandler("m-HotWheels:Client:Open2FastSurprise", function()
 		}, {}, {}, function()
 			TriggerServerEvent("m-HotWheels:Server:Open2FastSurprise")
 		end)
+	elseif Config.Framework == "esx" then
+
+	end
+end)
+
+
+RegisterNetEvent("m-HotWheels:Client:OpenWhiteBox")
+AddEventHandler("m-HotWheels:Client:OpenWhiteBox", function()
+	if Config.Framework == "qb" then
+		citizenid = QBCore.Functions.GetPlayerData().citizenid
+		TriggerServerEvent("inventory:server:OpenInventory", "stash", "HW_WhiteBox_" .. citizenid, { maxweight = 250000, slots = 35 })
+		TriggerEvent("inventory:client:SetCurrentStash", "HW_WhiteBox_" .. citizenid)
+	elseif Config.Framework == "esx" then
+
+	end
+end)
+
+RegisterNetEvent("m-HotWheels:Client:OpenGreyBox")
+AddEventHandler("m-HotWheels:Client:OpenGreyBox", function()
+	if Config.Framework == "qb" then
+		citizenid = QBCore.Functions.GetPlayerData().citizenid
+		TriggerServerEvent("inventory:server:OpenInventory", "stash", "HW_GreyBox_" .. citizenid, { maxweight = 250000, slots = 35 })
+		TriggerEvent("inventory:client:SetCurrentStash", "HW_GreyBox_" .. citizenid)
+	elseif Config.Framework == "esx" then
+
+	end
+end)
+
+RegisterNetEvent("m-HotWheels:Client:OpenBlueBox")
+AddEventHandler("m-HotWheels:Client:OpenBlueBox", function()
+	if Config.Framework == "qb" then
+		citizenid = QBCore.Functions.GetPlayerData().citizenid
+		TriggerServerEvent("inventory:server:OpenInventory", "stash", "HW_BlueBox_" .. citizenid, { maxweight = 250000, slots = 35 })
+		TriggerEvent("inventory:client:SetCurrentStash", "HW_BlueBox_" .. citizenid)
 	elseif Config.Framework == "esx" then
 
 	end
