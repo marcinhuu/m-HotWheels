@@ -106,7 +106,7 @@
 ![car](https://media.discordapp.net/attachments/1086372623002390620/1086373947882356806/porschepanameraturbo_hw.png)
 ![car](https://media.discordapp.net/attachments/1086372623002390620/1086373948146593913/teslamodel3_hw.png)
 
-- <strong>Box's ( Under development )</strong>
+- <strong>Box's</strong>
 
 ![box](https://media.discordapp.net/attachments/1086372623002390620/1086645464402772018/hw_box01.png)
 ![box](https://media.discordapp.net/attachments/1086372623002390620/1086645464755077140/hw_box02.png)
@@ -165,6 +165,12 @@
     ["hw_packsurprise"]             = {["name"] = "hw_packsurprise",                ["label"] = "Pack Surprise",                ["weight"] = 50,    ["type"] = "item",  ["image"] = "hw_packsurprise.png",              ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Receive: 1x Random Car<p></p>Rarity: N/A"},
     ["hw_boxsurprise"]              = {["name"] = "hw_boxsurprise",                 ["label"] = "Box Surprise",                 ["weight"] = 50,    ["type"] = "item",  ["image"] = "hw_boxsurprise.png",               ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Receive: 1x/3x Random Car<p></p>Rarity: N/A"},
     ["hw_boxsurprise_2f2f"]         = {["name"] = "hw_boxsurprise_2f2f",            ["label"] = "Pack Surprise",                ["weight"] = 50,    ["type"] = "item",  ["image"] = "hw_boxsurprise_2f2f.png",          ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Receive: 1x Random Car Collection<p></p>Rarity: N/A"},
+
+    -- Box's
+    ["hw_box01"]            = {["name"] = "hw_box01",               ["label"] = "White Box HW",             ["weight"] = 50,    ["type"] = "item",  ["image"] = "hw_box01.png",                 ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Some place to save hot wheel's cars..."},
+    ["hw_box02"]            = {["name"] = "hw_box02",               ["label"] = "Grey Box HW",              ["weight"] = 50,    ["type"] = "item",  ["image"] = "hw_box02.png",                 ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Some place to save hot wheel's cars..."},
+    ["hw_box03"]            = {["name"] = "hw_box03",               ["label"] = "Blue Box HW",              ["weight"] = 50,    ["type"] = "item",  ["image"] = "hw_box03.png",                 ["unique"] = false,     ["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Some place to save hot wheel's cars..."},
+
 ```
 
 # Setup Images:
