@@ -71,7 +71,60 @@ if Config.Framework == "qb" then
     end)
 
 elseif Config.Framework == "esx" then
+    ESX.RegisterUsableItem("hw_packsurprise", function(source, item) 
+        local src = source
+        local Player = ESX.GetPlayerFromId(src)
+        if not Player then return end
+        if Config.Cooldown.Enable then if not canOpen then return TriggerClientEvent('m-HotWheels:Client:Notify', src, "You can't open right now.", "error", 5000) end end
+        if Player.getInventoryItem("hw_packsurprise") ~= nil then
+            Player.removeInventoryItem("hw_packsurprise", 1)
+            TriggerClientEvent('m-HotWheels:Client:OpenPackSurprise', source)
+            if Config.Cooldown.Enable then Cooldown() end
+        end
+    end)
 
+
+    ESX.RegisterUsableItem("hw_boxsurprise", function(source, item) 
+        local src = source
+        local Player = ESX.GetPlayerFromId(src)
+        if not Player then return end
+        if Player.getInventoryItem("hw_boxsurprise") ~= nil then
+            Player.removeInventoryItem("hw_boxsurprise", 1)
+            TriggerClientEvent('m-HotWheels:Client:OpenBoxSurprise', source)
+        end
+    end)
+
+
+    ESX.RegisterUsableItem("hw_boxsurprise_2f2f", function(source, item) 
+        local src = source
+        local Player = ESX.GetPlayerFromId(src)
+        if not Player then return end
+        if Player.getInventoryItem("hw_boxsurprise_2f2f") ~= nil then
+            Player.removeInventoryItem("hw_boxsurprise_2f2f", 1)
+            TriggerClientEvent('m-HotWheels:Client:Open2FastSurprise', source)
+        end
+    end)
+
+    ESX.RegisterUsableItem("hw_box01", function(source, item) 
+        local src = source
+        local Player = ESX.GetPlayerFromId(src)
+        if not Player then return end
+        TriggerClientEvent("m-HotWheels:Client:OpenWhiteBox", src)
+    end)
+
+    ESX.RegisterUsableItem("hw_box02", function(source, item) 
+        local src = source
+        local Player = ESX.GetPlayerFromId(src)
+        if not Player then return end
+        TriggerClientEvent("m-HotWheels:Client:OpenGreyBox", src)
+    end)
+
+    ESX.RegisterUsableItem("hw_box03", function(source, item) 
+        local src = source
+        local Player = ESX.GetPlayerFromId(src)
+        if not Player then return end
+        TriggerClientEvent("m-HotWheels:Client:OpenBlueBox", src)
+    end)
 end
 
 RegisterServerEvent("m-HotWheels:Server:OpenPackSurprise")
@@ -96,9 +149,22 @@ AddEventHandler("m-HotWheels:Server:OpenPackSurprise", function()
             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[normalDrop], 'add', 1)
         end
     elseif Config.Framework == "esx" then
+        local src = source
+        local Player = ESX.GetPlayerFromId(src)
+        if not Player then return end
+        local chance = math.random(1,100)
+        local normalDrop = Config.HotWheels.NormalCars[math.random(1, #Config.HotWheels.NormalCars)]
+        local rareDrop = Config.HotWheels.RareCars[math.random(1, #Config.HotWheels.RareCars)]
+        local ultrarareDrop = Config.HotWheels.UltraRareCars[math.random(1, #Config.HotWheels.UltraRareCars)]
 
+        if chance <= Config.HotWheels.Settings.RareCars and chance > Config.HotWheels.Settings.UltraRareCars then
+            Player.addInventoryItem(rareDrop, 1)
+        elseif chance <= Config.HotWheels.Settings.UltraRareCars then
+            Player.addInventoryItem(ultrarareDrop, 1)
+        else
+            Player.addInventoryItem(normalDrop, 1)
+        end
     end
-
 end)
 
 RegisterServerEvent("m-HotWheels:Server:OpenBoxSurprise")
@@ -128,9 +194,28 @@ AddEventHandler("m-HotWheels:Server:OpenBoxSurprise", function()
             end
         end
     elseif Config.Framework == "esx" then
+        local src = source
+        local Player = ESX.GetPlayerFromId(src)
+        if not Player then return end
+        local chance = math.random(1,100)
 
+        if chance <= Config.HotWheels.Settings.RareCars and chance > Config.HotWheels.Settings.UltraRareCars then
+            for _ = 1, math.random(2, 2), 1 do
+                local randItem = Config.HotWheels.RareCars[math.random(1, #Config.HotWheels.RareCars)]
+                Player.addInventoryItem(randItem, 1)
+            end
+        elseif chance <= Config.HotWheels.Settings.UltraRareCars then
+            for _ = 1, math.random(2, 2), 1 do
+                local randItem = Config.HotWheels.UltraRareCars[math.random(1, #Config.HotWheels.UltraRareCars)]
+                Player.addInventoryItem(randItem, 1)
+            end
+        else
+            for _ = 1, math.random(2, 2), 1 do
+                local randItem = Config.HotWheels.NormalCars[math.random(1, #Config.HotWheels.NormalCars)]
+                Player.addInventoryItem(randItem, 1)
+            end
+        end
     end
-
 end)
 
 RegisterServerEvent("m-HotWheels:Server:Open2FastSurprise")
@@ -143,6 +228,10 @@ AddEventHandler("m-HotWheels:Server:Open2FastSurprise", function()
         Player.Functions.AddItem(randItem, 1)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[randItem], 'add', 1)
     elseif Config.Framework == "esx" then
-
+        local src = source
+        local Player = ESX.GetPlayerFromId(src)
+        if not Player then return end
+        local randItem = Config.HotWheels.FastFurious[math.random(1, #Config.HotWheels.FastFurious)]
+        Player.addInventoryItem(randItem, 1)
     end
 end)
