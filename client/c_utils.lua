@@ -34,7 +34,7 @@ CreateThread(function()
                     size = vector3(1.0, 1.0, 2.0),
                     options = {
                         {
-                            name = "Trader"..k,
+                            name = "Trader:1",
                             event = "m-HotWheels:Client:OpenShop",
                             icon = "fas fa-car",
                             label = "Trader",
