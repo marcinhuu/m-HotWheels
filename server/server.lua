@@ -8,7 +8,7 @@ elseif Config.Framework == "esx" then
 else
     print("The "..Config.Framework.." is wrong or not available")
 end
-if Config.Inventory == "ox_inventory" and lib == nil then
+if Config.inventory == "ox_inventory" and lib == nil then
     print("[^4Warning^7] ^8ox_lib^7 is not setup but is required, the script will not function until you uncomment the line from fxmanifest")
 end
 
@@ -77,13 +77,41 @@ if Config.Framework == "qb" then
     end)
 
 elseif Config.Framework == "esx" then
+
+    function GiveItemToPlayer(xPlayer, item, amount)
+        print("Giving to "..xPlayer.getName().." ("..tostring(xPlayer.source)..") the item ^4"..item.."^7")
+        if Config.Inventory == "ox_inventory" then
+            exports.ox_inventory:AddItem(xPlayer.source, item, amount)
+        else
+            xPlayer.addInventoryItem(item, amount)
+        end
+    end
+
+    function RemoveItemFromPlayer(xPlayer, item, amount)
+        print("Removing the item ^4"..item.."^7 from "..xPlayer.getName().." ("..tostring(xPlayer.source)..")")
+        if Config.Inventory == "ox_inventory" then
+            exports.ox_inventory:RemoveItem(xPlayer.source, item, amount)
+        else
+            xPlayer.removeInventoryItem(item, amount)
+        end
+    end
+
+    function GetItemFromPlayer(xPlayer, item)
+        print("Getting the item ^4"..item.."^7 from "..xPlayer.getName().." ("..tostring(xPlayer.source)..")")
+        if Config.Inventory == "ox_inventory" then
+            return exports.ox_inventory:GetItem(xPlayer.source, item)
+        else
+            return xPlayer.getInventoryItem(item)
+        end
+    end
+
     ESX.RegisterUsableItem("hw_packsurprise", function(source, item) 
         local src = source
         local Player = ESX.GetPlayerFromId(src)
         if not Player then return end
         if Config.Cooldown.Enable then if not canOpen then return TriggerClientEvent('m-HotWheels:Client:Notify', src, "You can't open right now.", "error", 5000) end end
-        if Player.getInventoryItem("hw_packsurprise") ~= nil then
-            Player.removeInventoryItem("hw_packsurprise", 1)
+        if GetItemFromPlayer(Player, "hw_packsurprise") ~= nil then
+            RemoveItemFromPlayer(Player, "hw_packsurprise", 1)
             TriggerClientEvent('m-HotWheels:Client:OpenPackSurprise', source)
             if Config.Cooldown.Enable then Cooldown() end
         end
@@ -94,8 +122,8 @@ elseif Config.Framework == "esx" then
         local src = source
         local Player = ESX.GetPlayerFromId(src)
         if not Player then return end
-        if Player.getInventoryItem("hw_boxsurprise") ~= nil then
-            Player.removeInventoryItem("hw_boxsurprise", 1)
+        if GetItemFromPlayer(Player, "hw_boxsurprise") ~= nil then
+            RemoveItemFromPlayer(Player, "hw_boxsurprise", 1)
             TriggerClientEvent('m-HotWheels:Client:OpenBoxSurprise', source)
         end
     end)
@@ -105,8 +133,8 @@ elseif Config.Framework == "esx" then
         local src = source
         local Player = ESX.GetPlayerFromId(src)
         if not Player then return end
-        if Player.getInventoryItem("hw_boxsurprise_2f2f") ~= nil then
-            Player.removeInventoryItem("hw_boxsurprise_2f2f", 1)
+        if GetItemFromPlayer(Player, "hw_boxsurprise_2f2f") ~= nil then
+            RemoveItemFromPlayer(Player, "hw_boxsurprise_2f2f", 1)
             TriggerClientEvent('m-HotWheels:Client:Open2FastSurprise', source)
         end
     end)
@@ -134,7 +162,7 @@ elseif Config.Framework == "esx" then
 end
 
 if Config.Inventory == "ox_inventory" then
-    lib.callback.register("m-HotWheels:Server:OpenWhiteBox", function(source, name, info)
+    lib.callback.register("m-HotWheels:Server:OpenBox", function(source, name, info)
         if exports.ox_inventory:GetInventory(name, false) then
             return name
         else
@@ -142,6 +170,29 @@ if Config.Inventory == "ox_inventory" then
             return name
         end
     end)
+
+    if GetResourceState("ox_inventory") ~= "starting" and GetResourceState("ox_inventory") ~= "started" then
+        print("[^4Warning^7] ^8ox_inventory^7 is "..GetResourceState("ox_inventory").." but is set as inventory method")
+        return
+    end
+
+    local items = {}
+    for _, v in pairs(Config.Shop) do
+        items[#items+1] = {
+            name = v.name,
+            price = v.price,
+            count = v.amount
+        }
+    end
+    for k, v in pairs(Config.TargetLocations["Trader"]) do
+        exports.ox_inventory:RegisterShop("HotWheels"..tostring(k), {
+            name = 'HotWheels Trader',
+            inventory = items,
+            locations = {
+                vector3(v.x, v.y, v.z)
+            },
+        })
+    end
 end
 
 RegisterServerEvent("m-HotWheels:Server:OpenPackSurprise")
@@ -154,7 +205,7 @@ AddEventHandler("m-HotWheels:Server:OpenPackSurprise", function()
         local normalDrop = Config.HotWheels.NormalCars[math.random(1, #Config.HotWheels.NormalCars)]
         local rareDrop = Config.HotWheels.RareCars[math.random(1, #Config.HotWheels.RareCars)]
         local ultrarareDrop = Config.HotWheels.UltraRareCars[math.random(1, #Config.HotWheels.UltraRareCars)]
-    
+
         if chance <= Config.HotWheels.Settings.RareCars and chance > Config.HotWheels.Settings.UltraRareCars then
             Player.Functions.AddItem(rareDrop, 1)
             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[rareDrop], 'add', 1)
@@ -175,11 +226,11 @@ AddEventHandler("m-HotWheels:Server:OpenPackSurprise", function()
         local ultrarareDrop = Config.HotWheels.UltraRareCars[math.random(1, #Config.HotWheels.UltraRareCars)]
 
         if chance <= Config.HotWheels.Settings.RareCars and chance > Config.HotWheels.Settings.UltraRareCars then
-            Player.addInventoryItem(rareDrop, 1)
+            GiveItemToPlayer(Player, rareDrop, 1)
         elseif chance <= Config.HotWheels.Settings.UltraRareCars then
-            Player.addInventoryItem(ultrarareDrop, 1)
+            GiveItemToPlayer(Player, ultrarareDrop, 1)
         else
-            Player.addInventoryItem(normalDrop, 1)
+            GiveItemToPlayer(Player, normalDrop, 1)
         end
     end
 end)
@@ -219,17 +270,17 @@ AddEventHandler("m-HotWheels:Server:OpenBoxSurprise", function()
         if chance <= Config.HotWheels.Settings.RareCars and chance > Config.HotWheels.Settings.UltraRareCars then
             for _ = 1, math.random(2, 2), 1 do
                 local randItem = Config.HotWheels.RareCars[math.random(1, #Config.HotWheels.RareCars)]
-                Player.addInventoryItem(randItem, 1)
+                GiveItemToPlayer(Player, randItem, 1)
             end
         elseif chance <= Config.HotWheels.Settings.UltraRareCars then
             for _ = 1, math.random(2, 2), 1 do
                 local randItem = Config.HotWheels.UltraRareCars[math.random(1, #Config.HotWheels.UltraRareCars)]
-                Player.addInventoryItem(randItem, 1)
+                GiveItemToPlayer(Player, randItem, 1)
             end
         else
             for _ = 1, math.random(2, 2), 1 do
                 local randItem = Config.HotWheels.NormalCars[math.random(1, #Config.HotWheels.NormalCars)]
-                Player.addInventoryItem(randItem, 1)
+                GiveItemToPlayer(Player, randItem, 1)
             end
         end
     end
@@ -249,6 +300,6 @@ AddEventHandler("m-HotWheels:Server:Open2FastSurprise", function()
         local Player = ESX.GetPlayerFromId(src)
         if not Player then return end
         local randItem = Config.HotWheels.FastFurious[math.random(1, #Config.HotWheels.FastFurious)]
-        Player.addInventoryItem(randItem, 1)
+        GiveItemToPlayer(Player, randItem, 1)
     end
 end)
