@@ -2,8 +2,14 @@ if Config.Framework == "qb" then
     QBCore = exports["qb-core"]:GetCoreObject()
 elseif Config.Framework == "esx" then
     ESX = exports['es_extended']:getSharedObject()
+    if Config.Inventory == "qb" then
+        print("[^4Warning^7] ^8Config.Inventory^7 is setup qb but the framework is ESX!")
+    end
 else
     print("The "..Config.Framework.." is wrong or not available")
+end
+if Config.Inventory == "ox_inventory" and lib == nil then
+    print("[^4Warning^7] ^8ox_lib^7 is not setup but is required, the script will not function until you uncomment the line from fxmanifest")
 end
 
 local canOpen = true
@@ -124,6 +130,17 @@ elseif Config.Framework == "esx" then
         local Player = ESX.GetPlayerFromId(src)
         if not Player then return end
         TriggerClientEvent("m-HotWheels:Client:OpenBlueBox", src)
+    end)
+end
+
+if Config.Inventory == "ox_inventory" then
+    lib.callback.register("m-HotWheels:Server:OpenWhiteBox", function(source, name, info)
+        if exports.ox_inventory:GetInventory(name, false) then
+            return name
+        else
+            exports.ox_inventory:RegisterStash(name, name, info.slots, info.maxweight)
+            return name
+        end
     end)
 end
 

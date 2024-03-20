@@ -1,6 +1,7 @@
 Config = {}
 
 Config.Framework = "qb" -- "qb" or "esx"
+Config.Inventory = "qb" -- "qb" or "ox_inventory"
 Config.Cooldown = { Enable = false, Time = 60 } -- Enable cooldown? 60 = 1 Minute
 
 
