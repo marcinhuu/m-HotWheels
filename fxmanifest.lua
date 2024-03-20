@@ -3,6 +3,7 @@ author '! marcinhu.#6158'
 Description 'm-HotWheels'
 game 'gta5'
 
+lua54 'yes'
 
 shared_scripts {
 	'configs/**.lua',
