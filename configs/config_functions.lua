@@ -38,7 +38,7 @@ end
 -- ========================================================== Open Shop
 if not IsDuplicityVersion() then
     RegisterNetEvent('m-HotWheels:Client:OpenShop')
-    AddEventHandler('m-HotWheels:Client:OpenShop', function()
+    AddEventHandler('m-HotWheels:Client:OpenShop', function(data)
         if Config.Framework == "qb" then
             TriggerServerEvent("inventory:server:OpenInventory", "shop", "HotWheels", {
                 label = "HotWheels",
@@ -46,34 +46,14 @@ if not IsDuplicityVersion() then
                 slots = #Config.Shop,
             })
         elseif Config.Inventory == "ox_inventory" then
-            exports.ox_inventory:openInventory("shop", "HotWheels")
+            exports.ox_inventory:openInventory("shop", {type = "HotWheels", id = tonumber(data.name:sub((data.name:find(":")) + 1))})
         end
     end)
 end
 
 if Config.Inventory == "ox_inventory" then
-    if GetResourceState("ox_inventory") ~= "starting" or GetResourceState("ox_inventory") ~= "started" then
-        print("[^4Warning^7] ^8ox_inventory^7 is not started but is set as inventory method")
+    if GetResourceState("ox_inventory") ~= "starting" and GetResourceState("ox_inventory") ~= "started" then
+        print("[^4Warning^7] ^8ox_inventory^7 is "..GetResourceState("ox_inventory").." but is set as inventory method")
         return
-    end
-    if IsDuplicityVersion() then
-        local items = {}
-        for _, v in pairs(Config.Shop) do
-            items[#items+1] = {
-                name = v.name,
-                price = v.price,
-                count = v.amount
-            }
-        end
-        for k, v in pairs(Config.TargetLocations["Trader"]) do
-            exports.ox_inventory:RegisterShop('HotWheels', {
-                name = 'HotWheels Trader',
-                inventory = items,
-                locations = {
-                    vector3(v.x, v.y, v.z)
-                },
-                groups = {},
-            })
-        end
     end
 end
