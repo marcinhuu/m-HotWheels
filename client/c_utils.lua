@@ -17,17 +17,34 @@ CreateThread(function()
                 maxZ = v.z + 1,
             }, {
                 options = {
-                    {  
-                        event = "m-HotWheels:Client:OpenShop", 
-                        icon = "fas fa-car", 
+                    {
+                        event = "m-HotWheels:Client:OpenShop",
+                        icon = "fas fa-car",
                         label = "Trader",
                     },
                 },
                 distance = 2.0
             })
         end
-    elseif Config.Framework == "esx" then
-
+    else
+        if GetResourceState("ox_target") == "started" or GetResourceState("ox_target") == "starting" then
+            for k, v in pairs(Config.TargetLocations["Trader"]) do
+                exports.ox_target:addBoxZone({
+                    coords = vector3(v.x, v.y, v.z),
+                    size = vector3(1.0, 1.0, 2.0),
+                    options = {
+                        {
+                            name = "Trader:1",
+                            event = "m-HotWheels:Client:OpenShop",
+                            icon = "fas fa-car",
+                            label = "Trader",
+                        }
+                    }
+                })
+            end
+        else
+            print("[^4Warning^7] ^8ox_target^7 is not started, please install or setup your own targeting method in ^8c_utils.lua^7")
+        end
     end
 end)
 

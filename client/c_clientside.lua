@@ -7,7 +7,7 @@ else
 end
 
 local peds = Config.Settings.Ped
-local citizenid = nil
+local citizenid, identifier = nil, nil
 
 CreateThread(function()
 	if Config.Settings.Blip.blipEnable then
@@ -54,7 +54,31 @@ AddEventHandler("m-HotWheels:Client:OpenPackSurprise", function()
 			TriggerServerEvent("m-HotWheels:Server:OpenPackSurprise")
 		end)
 	elseif Config.Framework == "esx" then
-
+		if lib then
+			if lib.progressBar({
+				duration = 5000,
+				label = "Opening a pack...",
+				canCancel = false,
+				anim = {
+					dict = "mp_arresting",
+					clip ="a_uncuff"
+				}
+			}) then
+				TriggerServerEvent("m-HotWheels:Server:OpenPackSurprise")
+			end
+		else
+			ESX.Progressbar("Opening a pack...", 5000, {
+				FreezePlayer = true,
+				animation ={
+					type = "anim",
+					dict = "mp_arresting",
+					lib ="a_uncuff"
+				},
+				onFinish = function()
+					TriggerServerEvent("m-HotWheels:Server:OpenPackSurprise")
+				end
+			})
+		end
 	end
 end)
 
@@ -72,7 +96,31 @@ AddEventHandler("m-HotWheels:Client:OpenBoxSurprise", function()
 			TriggerServerEvent("m-HotWheels:Server:OpenBoxSurprise")
 		end)
 	elseif Config.Framework == "esx" then
-
+		if lib then
+			if lib.progressBar({
+				duration = 5000,
+				label = "Opening a pack...",
+				canCancel = false,
+				anim = {
+					dict = "mp_arresting",
+					clip ="a_uncuff"
+				}
+			}) then
+				TriggerServerEvent("m-HotWheels:Server:OpenBoxSurprise")
+			end
+		else
+			ESX.Progressbar("Opening a pack...", 5000, {
+				FreezePlayer = true,
+				animation ={
+					type = "anim",
+					dict = "mp_arresting",
+					lib ="a_uncuff"
+				},
+				onFinish = function()
+					TriggerServerEvent("m-HotWheels:Server:OpenBoxSurprise")
+				end
+			})
+		end
 	end
 end)
 
@@ -90,7 +138,31 @@ AddEventHandler("m-HotWheels:Client:Open2FastSurprise", function()
 			TriggerServerEvent("m-HotWheels:Server:Open2FastSurprise")
 		end)
 	elseif Config.Framework == "esx" then
-
+		if lib then
+			if lib.progressBar({
+				duration = 5000,
+				label = "Opening a pack...",
+				canCancel = false,
+				anim = {
+					dict = "mp_arresting",
+					clip ="a_uncuff"
+				}
+			}) then
+				TriggerServerEvent("m-HotWheels:Server:OpenPackSurprise")
+			end
+		else
+			ESX.Progressbar("Opening a pack...", 5000, {
+				FreezePlayer = true,
+				animation ={
+					type = "anim",
+					dict = "mp_arresting",
+					lib ="a_uncuff"
+				},
+				onFinish = function()
+					TriggerServerEvent("m-HotWheels:Server:OpenPackSurprise")
+				end
+			})
+		end
 	end
 end)
 
@@ -101,8 +173,11 @@ AddEventHandler("m-HotWheels:Client:OpenWhiteBox", function()
 		citizenid = QBCore.Functions.GetPlayerData().citizenid
 		TriggerServerEvent("inventory:server:OpenInventory", "stash", "HW_WhiteBox_" .. citizenid, { maxweight = 250000, slots = 35 })
 		TriggerEvent("inventory:client:SetCurrentStash", "HW_WhiteBox_" .. citizenid)
-	elseif Config.Framework == "esx" then
-
+	elseif Config.Inventory == "ox_inventory" and Config.Framework == "esx" then
+		identifier = ESX.GetPlayerData().identifier
+		lib.callback("m-HotWheels:Server:OpenBox", false, function (stash)
+			exports.ox_inventory:openInventory("stash", stash)
+		end, "HW_WhiteBox_" .. identifier, { maxweight = 250000, slots = 35 })
 	end
 end)
 
@@ -112,8 +187,11 @@ AddEventHandler("m-HotWheels:Client:OpenGreyBox", function()
 		citizenid = QBCore.Functions.GetPlayerData().citizenid
 		TriggerServerEvent("inventory:server:OpenInventory", "stash", "HW_GreyBox_" .. citizenid, { maxweight = 250000, slots = 35 })
 		TriggerEvent("inventory:client:SetCurrentStash", "HW_GreyBox_" .. citizenid)
-	elseif Config.Framework == "esx" then
-
+	elseif Config.Inventory == "ox_inventory" and Config.Framework == "esx" then
+		identifier = ESX.GetPlayerData().identifier
+		lib.callback("m-HotWheels:Server:OpenBox", false, function (stash)
+			exports.ox_inventory:openInventory("stash", stash)
+		end, "HW_GreyBox_" .. identifier, { maxweight = 250000, slots = 35 })
 	end
 end)
 
@@ -123,7 +201,10 @@ AddEventHandler("m-HotWheels:Client:OpenBlueBox", function()
 		citizenid = QBCore.Functions.GetPlayerData().citizenid
 		TriggerServerEvent("inventory:server:OpenInventory", "stash", "HW_BlueBox_" .. citizenid, { maxweight = 250000, slots = 35 })
 		TriggerEvent("inventory:client:SetCurrentStash", "HW_BlueBox_" .. citizenid)
-	elseif Config.Framework == "esx" then
-
+	elseif Config.Inventory == "ox_inventory" and Config.Framework == "esx" then
+		identifier = ESX.GetPlayerData().identifier
+		lib.callback("m-HotWheels:Server:OpenBox", false, function (stash)
+			exports.ox_inventory:openInventory("stash", stash)
+		end, "HW_BlueBox_" .. identifier, { maxweight = 250000, slots = 35 })
 	end
 end)
